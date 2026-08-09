@@ -137,8 +137,8 @@
     "description": "Cuenta con doble broche joyero para ajustar cómodamente su alargue según la medida de tu muñeca, entregando un ajuste más seguro y versátil.\n\n▫ Largo pulsera: 27 cm\n▫ Largo máximo con alargue: 28,5 cm\n▫ Diseño liviano, elegante y cómodo para uso diario",
     "material": "Base bronce con enchape 5 micras oro 24k",
     "price": 20990,
-    "stock": 1,
-    "stockLabel": "1",
+    "stock": 0,
+    "stockLabel": "SIN STOCK",
     "photo1": "assets/x755_1.jpg",
     "photo2": "assets/x755_2.png"
   },
@@ -178,8 +178,8 @@
     "price": 22990,
     "stock": 2,
     "stockLabel": "2",
-    "photo1": "assets/pj07_1.jpg",
-    "photo2": "assets/pj07_2.jpg"
+    "photo1": "assets/PJ07_3.jpg",
+    "photo2": "assets/PJ07_4.jpg"
   },
   {
     "collection": "",
