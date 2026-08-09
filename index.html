@@ -18,13 +18,36 @@ header{background:var(--white);border-bottom:1px solid #dfd2c5;position:sticky;t
 footer{background:#2d2520;color:#f5efe7;padding:40px 22px}.foot{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:30px}.foot .logo{font-size:22px}.foot p{color:#cfc3b7;font-size:12px;line-height:1.7}
 @media(max-width:850px){.links{display:none}.hero{grid-template-columns:1fr;padding-top:45px}.heroart{height:220px}.grid{grid-template-columns:repeat(2,1fr)}.productmodal{grid-template-columns:1fr}.pmphotos{max-height:430px}.pminfo{padding:25px}.shophead{align-items:start;flex-direction:column}}
 @media(max-width:520px){.grid{grid-template-columns:1fr 1fr;gap:10px}.info{padding:11px}.name{font-size:15px}.hero h1{font-size:42px}.nav{padding:14px}.shop{padding-left:14px;padding-right:14px}}
+.collection-block{
+  margin-bottom:60px;
+}
+
+.collection-title{
+  font-family:Georgia,serif;
+  font-size:42px;
+  font-weight:400;
+  letter-spacing:3px;
+  margin:0 0 25px;
+  color:var(--ink);
+}
+
+#colecciones{
+  padding-top:60px;
+}
 </style>
 </head>
 <body>
 <div class="top">ENVÍOS A TODO CHILE · PEDIDOS POR WHATSAPP · COMPRA SEGURA</div>
 <header><nav class="nav">
 <a class="logo" href="#">DÓMINI<small>JOYERÍA</small></a>
-<div class="links"><a href="#inicio">INICIO</a><a href="#catalogo">AROS</a><a href="#catalogo">PULSERAS</a><a href="#catalogo">COLLARES</a><a href="#catalogo">ANILLOS</a><a href="#catalogo">COLECCIONES</a></div>
+<div class="links">
+  <a href="#inicio" onclick="showHome()">INICIO</a>
+  <a href="#catalogo" onclick="goToCategory('Aros')">AROS</a>
+  <a href="#catalogo" onclick="goToCategory('Pulseras')">PULSERAS</a>
+  <a href="#catalogo" onclick="goToCategory('Collares')">COLLARES</a>
+  <a href="#catalogo" onclick="goToCategory('Anillos')">ANILLOS</a>
+  <a href="#colecciones" onclick="showCollections()">COLECCIONES</a>
+</div>
 <button class="cartbtn" onclick="openCart()">CARRITO <span class="count" id="cartCount">0</span></button>
 </nav></header>
 <section class="hero" id="inicio">
@@ -34,6 +57,18 @@ footer{background:#2d2520;color:#f5efe7;padding:40px 22px}.foot{max-width:1180px
 <section class="shop" id="catalogo">
 <div class="shophead"><div><div class="eyebrow" style="color:var(--terr);font-size:11px;letter-spacing:2px">COLECCIÓN DÓMINI</div><h2>Selección actual</h2></div><div class="filters" id="filters"></div></div>
 <div class="grid" id="grid"></div>
+</section>
+  <section class="shop" id="colecciones" style="display:none">
+  <div class="shophead">
+    <div>
+      <div class="eyebrow" style="color:var(--terr);font-size:11px;letter-spacing:2px">
+        DÓMINI JOYERÍA
+      </div>
+      <h2>Colecciones</h2>
+    </div>
+  </div>
+
+  <div id="collectionsContent"></div>
 </section>
 <footer><div class="foot"><div><div class="logo">DÓMINI<small>JOYERÍA</small></div></div><p>Pedidos y consultas por WhatsApp.<br>Los pagos online se incorporarán en una segunda etapa.</p></div></footer>
 
@@ -63,5 +98,52 @@ function updateCart(){let keys=Object.keys(cart);let total=0,count=0;document.ge
 function openCart(){document.getElementById('cartOverlay').classList.add('show');updateCart()}function closeCart(){document.getElementById('cartOverlay').classList.remove('show')}
 function sendWhatsApp(){const keys=Object.keys(cart);if(!keys.length)return;let total=0;let msg='Hola DÓMINI JOYERÍA, quiero hacer este pedido:%0A%0A';keys.forEach(k=>{const p=products.find(x=>x.code===k);total+=p.price*cart[k];msg+=encodeURIComponent(`${p.name} — ${cart[k]} unidad(es) — ${money(p.price*cart[k])}\nCódigo: ${p.code}\n`)});msg+=encodeURIComponent(`\nTOTAL: ${money(total)}\n\nQuedo atenta para coordinar disponibilidad, entrega/envío y forma de pago.`);window.open('https://wa.me/56920862501?text='+msg,'_blank')}
 document.getElementById('productModal').addEventListener('click',e=>{if(e.target.id==='productModal')closeProduct()});init();
+  function goToCategory(category){
+  document.getElementById('colecciones').style.display='none';
+  document.getElementById('catalogo').style.display='block';
+
+  const button = [...document.querySelectorAll('#filters .filter')]
+    .find(b => b.textContent.trim() === category);
+
+  render(category, button);
+
+  setTimeout(() => {
+    document.getElementById('catalogo')
+      .scrollIntoView({behavior:'smooth'});
+  }, 50);
+}
+
+function showHome(){
+  document.getElementById('colecciones').style.display='none';
+  document.getElementById('catalogo').style.display='block';
+}
+
+function showCollections(){
+  document.getElementById('catalogo').style.display='none';
+  document.getElementById('colecciones').style.display='block';
+
+  const collections = [...new Set(
+    products.map(p => p.collection).filter(Boolean)
+  )];
+
+  document.getElementById('collectionsContent').innerHTML =
+    collections.map(collection => `
+      <div class="collection-block">
+        <div class="collection-title">${esc(collection)}</div>
+
+        <div class="grid">
+          ${products
+            .filter(p => p.collection === collection)
+            .map(card)
+            .join('')}
+        </div>
+      </div>
+    `).join('');
+
+  setTimeout(() => {
+    document.getElementById('colecciones')
+      .scrollIntoView({behavior:'smooth'});
+  }, 50);
+}
 </script>
 </body></html>
