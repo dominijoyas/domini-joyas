@@ -321,5 +321,23 @@ function showCollections(){
       .scrollIntoView({behavior:'smooth'});
   }, 50);
 }
+  let heroIndex = 0;
+
+function changeHeroSlide(){
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dots span');
+
+  if (!slides.length) return;
+
+  slides[heroIndex].classList.remove('active');
+  dots[heroIndex].classList.remove('active');
+
+  heroIndex = (heroIndex + 1) % slides.length;
+
+  slides[heroIndex].classList.add('active');
+  dots[heroIndex].classList.add('active');
+}
+
+setInterval(changeHeroSlide, 4500);
 </script>
 </body></html>
