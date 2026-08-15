@@ -27,7 +27,7 @@ header{background:#fff;border-bottom:1px solid #dfd2c5;position:sticky;top:0;z-i
 }
 .links{display:flex;justify-content:center;align-items:center;gap:28px;margin:0;font-size:13px;letter-spacing:.8px;}.links a{text-decoration:none;color:var(--ink);}
 .cartbtn{position:absolute;right:22px;bottom:18px;border:1px solid var(--terr);color:var(--terr);background:transparent;padding:10px 14px;border-radius:2px;cursor:pointer;
-}.count{background:var(--terr);color:#fff;border-radius:50%;padding:2px 6px;font-size:10px;margin-left:5px}.hero{width:100%;max-width:none;margin:0;padding:0;display:grid;grid-template-columns:50% 50%;align-items:stretch;min-height:calc(100vh - 141px);}
+}.count{position:absolute;top:2px;right:0;min-width:13px;height:13px;padding:0;display:flex;align-items:center;justify-content:center;background:var(--terr);color:#fff;border-radius:50%;font-size:8px;line-height:1;}.hero{width:100%;max-width:none;margin:0;padding:0;display:grid;grid-template-columns:50% 50%;align-items:stretch;min-height:calc(100vh - 141px);}
 .hero > div:first-child{display:flex;flex-direction:column;justify-content:center;padding:70px 7vw;box-sizing:border-box;}.heroart{height:auto;min-height:calc(100vh - 141px);width:100%;margin:0;position:relative;overflow:hidden;background:#ddc7b1;}.hero h1{font-family:Georgia,serif;font-size:58px;font-weight:400;letter-spacing:3px;margin:0 0 18px}.hero p{color:var(--muted);line-height:1.8;max-width:540px}.hero .eyebrow{color:var(--terr);letter-spacing:3px;font-size:12px}.heroart{height:360px;position:relative;overflow:hidden;background:#ddc7b1;
 }
 
@@ -118,7 +118,7 @@ header{background:#fff;border-bottom:1px solid #dfd2c5;position:sticky;top:0;z-i
 .photo-arrow:hover{background:#fff;}.photo-prev{left:18px;}.photo-next{right:18px;}
 .photo-counter{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);background:rgba(45,37,32,.65);color:#fff;padding:5px 10px;font-size:10px;letter-spacing:1px;z-index:5;}
 .pminfo{padding:38px}.pminfo h2{font-family:Georgia,serif;font-size:40px;font-weight:400;margin:6px 0 16px}.pminfo .bigprice{font-size:24px;color:var(--terr);margin-bottom:24px}.pminfo p{line-height:1.7;color:#5f564f}.pminfo .material{border-top:1px solid #ddd0c4;border-bottom:1px solid #ddd0c4;padding:18px 0;margin:20px 0;font-size:13px}.closemodal{position:absolute;right:14px;top:10px;background:#fff;border:0;font-size:24px;cursor:pointer;z-index:2}footer{background:#2d2520;color:#f5efe7;padding:40px 22px}.foot{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:30px}.foot .logo{font-size:22px}.foot p{color:#cfc3b7;font-size:12px;line-height:1.7}@media(max-width:850px){
-.links{display:none}.mobile-menu-btn{display:block;}.nav{padding:18px 55px 16px;min-height:52px;box-sizing:border-box;}.nav .logo{margin:0 auto;}.nav .cartbtn{position:absolute;right:12px;top:18px;padding:8px 10px;font-size:10px;}
+.links{display:none}.mobile-menu-btn{display:block;}.nav{padding:18px 55px 16px;min-height:52px;box-sizing:border-box;}.nav .logo{position:absolute;left:50%;transform:translateX(-50%);top:18px;margin:0;}.nav .cartbtn{position:absolute;right:12px;top:17px;width:34px;height:34px;padding:0;border:0;background:transparent;color:var(--ink);font-size:18px;display:flex;align-items:center;justify-content:center;}
 .mobile-menu{position:absolute;top:100%;left:0;width:210px;background:#fff;border-right:1px solid #dfd2c5;border-bottom:1px solid #dfd2c5;box-shadow:0 8px 20px rgba(45,37,32,.08);z-index:20;}
 .mobile-menu.show{display:flex;flex-direction:column;}.mobile-menu a{padding:16px 20px;border-bottom:1px solid #eee5dd;font-size:11px;letter-spacing:1.5px;}.hero{grid-template-columns:1fr;min-height:auto;}.hero > div:first-child{padding:55px 22px 45px;}.heroart{height:70vh;min-height:420px;}
 .grid{grid-template-columns:repeat(3,1fr);gap:22px;}.productmodal{grid-template-columns:1fr}.pmphotos{max-height:430px}.pminfo{padding:25px;}.shophead{align-items:start;flex-direction:column;}
@@ -173,7 +173,7 @@ header{background:#fff;border-bottom:1px solid #dfd2c5;position:sticky;top:0;z-i
     <a href="#catalogo" onclick="goToCategory('Anillo')">ANILLOS</a>
     <a href="#colecciones" onclick="showCollections()">COLECCIONES</a>
   </div>
-<button class="cartbtn" onclick="openCart()">CARRITO <span class="count" id="cartCount">0</span></button>
+<button class="cartbtn" onclick="openCart()" aria-label="Abrir carrito"> 🛒 <span class="count" id="cartCount">0</span></button>
 
 </nav>
 
