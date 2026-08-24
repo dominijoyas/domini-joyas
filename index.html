@@ -220,6 +220,34 @@ color:var(--ink);
 font-size:11px;
 letter-spacing:1.8px;
 }
+  
+/* CORRECCIÓN FINAL DEL CARRITO */
+#cartOverlay{
+  display:none;
+  position:fixed !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  background:rgba(24,18,14,.55);
+  z-index:9999 !important;
+}
+
+#cartOverlay.show{
+  display:block !important;
+}
+
+#cartOverlay .drawer{
+  position:fixed !important;
+  right:0 !important;
+  top:0 !important;
+  width:min(460px,100%) !important;
+  height:100vh !important;
+  box-sizing:border-box;
+  background:var(--white);
+  padding:24px;
+  overflow-y:auto;
+  z-index:10000 !important;
+}
 </style>
 </head>
 <body>
