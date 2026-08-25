@@ -360,7 +360,30 @@ function change(code,d){const p=products.find(x=>x.code===code);cart[code]=(cart
 function save(){localStorage.setItem('domini_cart',JSON.stringify(cart))}
 function updateCart(){let keys=Object.keys(cart);let total=0;let count=0;document.getElementById('cartCount').textContent=keys.reduce((a,k)=>a+cart[k],0);document.getElementById('emptyCart').style.display=keys.length?'none':'block';document.getElementById('cartBottom').style.display=keys.length?'block':'none';document.getElementById('cartItems').innerHTML=keys.map(k=>{const p=products.find(x=>x.code===k);if(!p)return '';total+=p.price*cart[k];count+=cart[k];return `<div class="cartitem"><img src="${p.photo1}" alt="${esc(p.name)}"><div><strong>${esc(p.name)}</strong><div class="meta">${money(p.price)} c/u</div><div class="qty"><button onclick="change('${esc(k)}',-1)">−</button><span>${cart[k]}</span><button onclick="change('${esc(k)}',1)">+</button></div></div><div class="cartitem-right"><button class="remove-item" onclick="removeFromCart('${esc(k)}')" aria-label="Eliminar">×</button><strong>${money(p.price*cart[k])}</strong></div></div>`;}).join('');document.getElementById('cartTotal').textContent=money(total);}
 function removeFromCart(code){delete cart[code];save();updateCart();}
-function openCart(){const cart=document.getElementById('cartOverlay');console.log(cart);cart.classList.add('show');updateCart();}function closeCart(){document.getElementById('cartOverlay').classList.remove('show')}
+function openCart(){const overlay = document.getElementById('cartOverlay');const drawer = overlay.querySelector('.drawer');document.body.appendChild(overlay);
+overlay.classList.add('show');overlay.style.cssText = `display:block !important;position:fixed !important;inset:0 !important;width:100vw !important;height:100vh !important;background:rgba(24,18,14,.55) !important; z-index:99999 !important;`;
+
+  drawer.style.cssText = `
+    position:fixed !important;
+    top:0 !important;
+    right:0 !important;
+    left:auto !important;
+    bottom:auto !important;
+    width:460px !important;
+    max-width:100vw !important;
+    height:100vh !important;
+    box-sizing:border-box !important;
+    margin:0 !important;
+    background:#fff !important;
+    padding:24px !important;
+    overflow-y:auto !important;
+    z-index:100000 !important;
+  `;
+
+  updateCart();
+}
+
+function closeCart(){const overlay = document.getElementById('cartOverlay');overlay.classList.remove('show');overlay.style.display = 'none';}
 function sendWhatsApp(){const keys=Object.keys(cart);if(!keys.length)return;let total=0;let msg='Hola DÓMINI JOYERÍA, quiero hacer este pedido:%0A%0A';keys.forEach(k=>{const p=products.find(x=>x.code===k);total+=p.price*cart[k];msg+=encodeURIComponent(`${p.name} — ${cart[k]} unidad(es) — ${money(p.price*cart[k])}\nCódigo: ${p.code}\n`)});msg+=encodeURIComponent(`\nTOTAL: ${money(total)}\n\nQuedo atenta para coordinar disponibilidad, entrega/envío y forma de pago.`);window.open('https://wa.me/56920862501?text='+msg,'_blank')}
 document.getElementById('productModal').addEventListener('click',e=>{if(e.target.id==='productModal')closeProduct()});init();
 function goToCategory(category){
