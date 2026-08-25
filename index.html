@@ -476,23 +476,54 @@ function removeFromCart(code){delete cart[code];save();updateCart();}
 function openCart(){const overlay = document.getElementById('cartOverlay');const drawer = overlay.querySelector('.drawer');document.body.appendChild(overlay);
 overlay.classList.add('show');overlay.style.cssText = `display:block !important;position:fixed !important;inset:0 !important;width:100vw !important;height:100vh !important;background:rgba(24,18,14,.55) !important; z-index:99999 !important;`;
 
-  drawer.style.cssText = `
-    position:fixed !important;
-    top:0 !important;
-    right:0 !important;
-    left:auto !important;
-    bottom:auto !important;
-    width:460px !important;
-    max-width:100vw !important;
-    height:100vh !important;
-    box-sizing:border-box !important;
-    margin:0 !important;
-    background:#fff !important;
-    padding:24px !important;
-    overflow-y:auto !important;
-    z-index:100000 !important;
-  `;
+drawer.style.cssText = `
+  position:fixed !important;
+  top:0 !important;
+  right:0 !important;
+  left:auto !important;
+  bottom:auto !important;
 
+  width:420px !important;
+  max-width:92vw !important;
+  height:100vh !important;
+
+  box-sizing:border-box !important;
+  margin:0 !important;
+
+  background:#fff !important;
+  padding:34px 30px !important;
+
+  overflow-y:auto !important;
+  z-index:100000 !important;
+
+  font-family:Arial,Helvetica,sans-serif !important;
+  color:#2d2520 !important;
+`;
+drawer.querySelector('.drawerhead').style.cssText = `
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-bottom:20px;
+  margin-bottom:5px;
+  border-bottom:1px solid #e5ddd6;
+`;
+
+drawer.querySelector('.drawerhead h3').style.cssText = `
+  margin:0;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:30px;
+  font-weight:500;
+  letter-spacing:2px;
+  color:#2d2520;
+`;
+
+drawer.querySelector('.x').style.cssText = `
+  background:none;
+  border:0;
+  font-size:22px;
+  color:#9b8d82;
+  cursor:pointer;
+`;
   updateCart();
 }
 
