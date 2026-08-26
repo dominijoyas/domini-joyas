@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DÓMINI — Piezas con carácter</title>
+<meta name="description" content="DÓMINI — joyería contemporánea, piezas con carácter e identidad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--terr:#ab5722;--ink:#26211d;--muted:#756b63;--line:#e7dfd7;--paper:#fff;--warm:#f7f2ec;--soft:#eee6dd;--gold:#b78945}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:Montserrat,Arial,sans-serif;font-size:13px}button,a{font:inherit}a{text-decoration:none;color:inherit}button{cursor:pointer}
+.top{height:30px;background:#26211d;color:#fff;display:flex;align-items:center;justify-content:center;font-size:9px;letter-spacing:2.2px;text-transform:uppercase}
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+.nav{height:112px;max-width:1240px;margin:auto;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:15px 70px}.logo{font-family:'Cormorant Garamond',serif;font-size:37px;font-weight:500;letter-spacing:9px;line-height:1}.links{display:flex;gap:31px;align-items:center;justify-content:center}.links a{font-size:10px;letter-spacing:1.8px;position:relative}.links a:hover{color:var(--terr)}
+.mobile-menu-btn{display:none;position:absolute;left:15px;top:38px;border:0;background:none;font-size:22px;color:var(--ink);padding:4px}.cartbtn{position:absolute;right:20px;top:51px;width:38px;height:38px;border:0;background:none;color:var(--ink);display:flex;align-items:center;justify-content:center}.cartbtn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}.cartbtn:hover{color:var(--terr)}.count{position:absolute;right:0;top:1px;min-width:14px;height:14px;border-radius:50%;background:var(--terr);color:#fff;font-size:8px;display:flex;align-items:center;justify-content:center}
+.mobile-menu{display:none}
+/* HERO — A + C */
+.hero{position:relative;min-height:calc(100vh - 142px);height:calc(100vh - 142px);overflow:hidden;background:#ddd1c5}.hero-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:heroFade 12s infinite}.hero-slide:nth-child(1){animation-delay:0s}.hero-slide:nth-child(2){animation-delay:6s}.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(25,19,15,.52) 0%,rgba(25,19,15,.18) 42%,rgba(25,19,15,.03) 72%),linear-gradient(0deg,rgba(20,15,11,.32),transparent 45%);pointer-events:none}@keyframes heroFade{0%,8%{opacity:0}14%,43%{opacity:1}50%,100%{opacity:0}}
+.hero-copy{position:absolute;left:7vw;bottom:10vh;z-index:2;color:#fff;max-width:620px}.hero-kicker{font-size:10px;letter-spacing:3px;margin-bottom:16px}.hero-copy h1{font-family:'Cormorant Garamond',serif;font-size:76px;line-height:.9;font-weight:400;letter-spacing:2px;margin:0 0 24px}.hero-copy p{max-width:460px;line-height:1.8;font-size:12px;margin:0 0 26px;color:rgba(255,255,255,.88)}.hero-cta{display:inline-flex;align-items:center;gap:14px;border:1px solid rgba(255,255,255,.8);color:#fff;padding:12px 17px;font-size:9px;letter-spacing:2px;text-transform:uppercase;background:transparent}.hero-cta:hover{background:#fff;color:var(--ink)}.hero-label{position:absolute;right:6vw;bottom:8vh;z-index:2;color:rgba(255,255,255,.8);font-family:'Cormorant Garamond',serif;font-size:38px;letter-spacing:7px}.hero-dots{position:absolute;z-index:3;bottom:32px;left:50%;transform:translateX(-50%);display:flex;gap:7px}.hero-dots span{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.55)}.hero-dots span:first-child{width:18px;border-radius:10px;background:#fff}
+/* HOME SECTIONS */
+.home-section{max-width:1240px;margin:auto;padding:100px 36px}.section-kicker{font-size:9px;letter-spacing:3px;color:var(--terr);text-transform:uppercase;margin-bottom:10px}.section-title{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:400;letter-spacing:1px;margin:0}.section-intro{max-width:480px;color:var(--muted);line-height:1.8;font-size:11px}
+.instinto-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:34px;gap:30px}.instinto-track{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x proximity;padding:0 0 12px;scrollbar-width:thin}.instinto-track::-webkit-scrollbar{height:3px}.instinto-track::-webkit-scrollbar-thumb{background:#d9cec3}.mini-card{flex:0 0 255px;scroll-snap-align:start;position:relative}.mini-pic{aspect-ratio:1/1;overflow:hidden;background:#f4eee8;position:relative}.mini-pic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.mini-card:hover img{transform:scale(1.025)}.mini-info{text-align:center;padding-top:13px}.mini-name{font-family:'Cormorant Garamond',serif;font-size:20px}.mini-price{font-size:10px;color:var(--terr);letter-spacing:1px;margin-top:5px}.mini-add{position:absolute;right:11px;bottom:55px;width:29px;height:29px;border-radius:50%;border:1px solid rgba(38,33,29,.35);background:rgba(255,255,255,.92);color:var(--ink);font-size:18px;line-height:1}.mini-add:hover{background:var(--terr);color:#fff;border-color:var(--terr)}
+.brand-story{background:var(--warm);max-width:none}.story-inner{max-width:1240px;margin:auto;padding:100px 36px;display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}.story-image{aspect-ratio:1.1/1;background:#eee4da;position:relative;overflow:hidden}.story-image img{width:100%;height:100%;object-fit:cover;display:block}.story-image.no-image{display:flex;align-items:center;justify-content:center}.story-image.no-image::after{content:'PACKAGING DÓMINI';font-family:'Cormorant Garamond',serif;font-size:28px;letter-spacing:5px;color:#8e8176}.story-copy{max-width:450px}.story-copy h2{font-family:'Cormorant Garamond',serif;font-size:54px;font-weight:400;line-height:.95;margin:0 0 20px}.story-copy p{color:var(--muted);line-height:1.9;font-size:11px}.story-rule{width:42px;border-top:1px solid var(--terr);margin:28px 0}
+.category-zone{padding-top:85px;padding-bottom:110px}.category-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:40px}.category-link{padding:38px 15px;text-align:center;border-right:1px solid var(--line);transition:.25s}.category-link:last-child{border-right:0}.category-link span{display:block;font-family:'Cormorant Garamond',serif;font-size:30px;margin-bottom:8px}.category-link small{font-size:8px;letter-spacing:2px;color:var(--muted)}.category-link:hover{background:var(--warm);color:var(--terr)}
+/* CATALOG */
+.catalog{display:none;max-width:1240px;margin:auto;padding:70px 36px 110px}.catalog.show{display:block}.catalog-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}.catalog-title{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:400;margin:0}.filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.filter{border:1px solid #d5c9be;background:#fff;padding:9px 13px;font-size:9px;letter-spacing:1.5px;text-transform:uppercase}.filter.active,.filter:hover{background:var(--terr);color:#fff;border-color:var(--terr)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:55px;row-gap:65px}.card{position:relative}.pic{aspect-ratio:1/1;overflow:hidden;background:#f5efe9;position:relative;cursor:pointer}.pic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.card:hover .pic img{transform:scale(1.025)}.info{text-align:center;padding:15px 5px 5px}.name{font-family:'Cormorant Garamond',serif;font-size:21px;letter-spacing:.4px}.price{font-size:10px;letter-spacing:1px;color:var(--terr);margin-top:6px}.sold-price{font-size:9px;letter-spacing:1.8px;color:#9b8d82}.meta{display:none}.card .pic>button{position:absolute;right:12px;bottom:12px;width:30px;height:30px;border:1px solid rgba(38,33,29,.35);border-radius:50%;background:rgba(255,255,255,.93);color:var(--ink);font-size:18px;line-height:1;z-index:2}.card .pic>button:hover{background:var(--terr);color:#fff;border-color:var(--terr)}
+/* PRODUCT MODAL */
+.modal{display:none;position:fixed;inset:0;background:rgba(25,19,15,.62);z-index:80;align-items:center;justify-content:center;padding:22px}.modal.show{display:flex}.productmodal{background:#fff;max-width:980px;width:100%;max-height:92vh;overflow:auto;display:grid;grid-template-columns:1.05fr .95fr;position:relative}.pmphotos{position:relative;background:#f2ebe4;min-height:600px;overflow:hidden;touch-action:pan-y}.pmphotos img{width:100%;height:100%;min-height:600px;object-fit:cover;display:block}.photo-arrow{position:absolute;top:0;height:100%;width:42%;border:0;background:transparent;color:transparent;font-size:0;z-index:3}.photo-prev{left:0}.photo-next{right:0}.photo-counter{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:7px;width:25px;height:7px;z-index:4}.photo-counter::before,.photo-counter::after{content:"";width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.55)}.photo-counter::before{background:#fff}.photo-counter[data-active="2"]::before{background:rgba(255,255,255,.55)}.photo-counter[data-active="2"]::after{background:#fff;transform:scale(1.3)}.pminfo{padding:60px 48px}.pminfo .collection{display:block;color:var(--terr);font-size:9px;letter-spacing:2px;text-transform:uppercase}.pminfo h2{font-family:'Cormorant Garamond',serif;font-size:43px;font-weight:400;line-height:1;margin:8px 0 13px}.bigprice{font-size:14px;color:var(--terr);letter-spacing:1px}.pminfo p{font-size:11px;color:var(--muted);line-height:1.8;margin:28px 0}.material{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:17px 0;font-size:10px;line-height:1.7}.pminfo .checkout{margin-top:28px}.closemodal{position:absolute;right:12px;top:10px;background:#fff;border:0;font-size:24px;z-index:5;color:#777}
+/* CART */
+.overlay{display:none;position:fixed;inset:0;background:rgba(24,18,14,.55);z-index:90}.overlay.show{display:block}.drawer{position:fixed;right:0;top:0;width:min(430px,100%);height:100vh;background:#fff;padding:30px;overflow-y:auto;box-shadow:-12px 0 35px rgba(30,20,15,.08)}.drawerhead{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:18px}.drawer h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;letter-spacing:2px;margin:0}.x{background:none;border:0;color:#8b8179;font-size:22px}.cartitem{display:grid;grid-template-columns:62px 1fr auto;gap:14px;align-items:center;padding:18px 0;border-bottom:1px solid #eee8e2}.cartitem img{width:62px;height:70px;object-fit:cover}.cartitem strong{font-size:10px;letter-spacing:.7px;font-weight:500}.cartitem .meta{display:block;color:#9b8d82;font-size:9px;margin-top:4px}.cartitem-right{height:70px;display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between}.remove-item{border:0;background:none;color:#aaa098;font-size:17px;padding:2px}.remove-item:hover{color:var(--terr)}.qty{display:flex;align-items:center;gap:8px;margin-top:8px}.qty button{width:22px;height:22px;border:1px solid #ddd3ca;background:#fff;color:#6f6259}.total{display:flex;justify-content:space-between;border-top:1px solid #ddd3ca;padding-top:20px;margin-top:20px;font-size:13px}.total strong{color:var(--terr);font-weight:500}.checkout{display:block;width:100%;border:0;background:var(--terr);color:#fff;padding:13px;font-size:9px;letter-spacing:1.7px;margin-top:16px}.note{font-size:9px;line-height:1.7;color:#9b8d82;margin-top:11px}
+footer{background:#26211d;color:#fff;padding:60px 36px}.foot{max-width:1240px;margin:auto;display:flex;justify-content:space-between;gap:30px;align-items:end}.foot .logo{color:#fff;font-size:28px}.foot p{font-size:9px;line-height:1.8;color:#c9beb4;margin:0;text-align:right}
+@media(max-width:850px){.top{font-size:8px;letter-spacing:1.5px}.nav{height:70px;padding:0 55px}.logo{font-size:30px;letter-spacing:7px}.links{display:none}.mobile-menu-btn{display:block}.cartbtn{right:11px;top:16px;width:34px;height:34px}.mobile-menu{position:absolute;top:100%;left:0;width:220px;background:#fff;border-right:1px solid var(--line);border-bottom:1px solid var(--line);box-shadow:0 10px 25px rgba(30,20,15,.08)}.mobile-menu.show{display:flex;flex-direction:column}.mobile-menu a{padding:16px 20px;border-bottom:1px solid #eee7e1;font-size:9px;letter-spacing:1.7px}.hero{height:calc(100svh - 100px);min-height:560px}.hero-copy{left:24px;right:24px;bottom:75px}.hero-copy h1{font-size:56px}.hero-copy p{font-size:10px;max-width:340px}.hero-label{right:24px;bottom:36px;font-size:24px;letter-spacing:5px}.home-section{padding:70px 20px}.section-title{font-size:43px}.instinto-head{display:block}.instinto-head .section-intro{margin-top:15px}.instinto-track{gap:14px;margin-right:-20px;padding-right:20px}.mini-card{flex-basis:210px}.story-inner{padding:70px 20px;grid-template-columns:1fr;gap:40px}.story-copy h2{font-size:45px}.category-zone{padding-top:65px;padding-bottom:75px}.category-grid{grid-template-columns:1fr 1fr}.category-link:nth-child(2){border-right:0}.category-link:nth-child(1),.category-link:nth-child(2){border-bottom:1px solid var(--line)}.catalog{padding:55px 16px 80px}.catalog-head{display:block}.catalog-title{font-size:43px;margin-bottom:25px}.filters{justify-content:flex-start}.grid{grid-template-columns:1fr 1fr;column-gap:14px;row-gap:45px}.name{font-size:18px}.productmodal{grid-template-columns:1fr;max-height:94vh}.pmphotos{min-height:55vh;max-height:55vh}.pmphotos img{min-height:55vh}.pminfo{padding:28px 22px}.pminfo h2{font-size:35px}.drawer{width:100%;padding:25px 20px}.foot{display:block}.foot p{text-align:left;margin-top:22px}}
+@media(max-width:520px){.hero-copy h1{font-size:48px}.hero-copy{bottom:68px}.hero-label{font-size:20px}.section-title{font-size:39px}.mini-card{flex-basis:190px}.category-link{padding:30px 8px}.category-link span{font-size:25px}.category-link small{font-size:7px}.grid{column-gap:10px}.info{padding-top:11px}.name{font-size:17px}.price{font-size:9px}.card .pic>button{right:8px;bottom:8px;width:28px;height:28px}}
+</style>
+</head>
+<body>
+<div class="top">ENVÍOS A TODO CHILE · PEDIDOS POR WHATSAPP · COMPRA SEGURA</div>
+<header>
+<nav class="nav">
+<button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Abrir menú">⋮</button>
+<a class="logo" href="#inicio" onclick="showHome()">DÓMINI</a>
+<div class="links">
+<a href="#inicio" onclick="showHome()">INICIO</a>
+<a href="#catalogo" onclick="goToCategory('Aros')">AROS</a>
+<a href="#catalogo" onclick="goToCategory('Pulsera')">PULSERAS</a>
+<a href="#catalogo" onclick="goToCategory('Collar')">COLLARES</a>
+<a href="#catalogo" onclick="goToCategory('Anillo')">ANILLOS</a>
+<a href="#instinto" onclick="goToInstinto()">INSTINTO</a>
+</div>
+<button class="cartbtn" onclick="openCart()" aria-label="Abrir carrito"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.4L21 7H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span class="count" id="cartCount">0</span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+<a href="#inicio" onclick="showHome();toggleMobileMenu()">INICIO</a>
+<a href="#catalogo" onclick="goToCategory('Aros');toggleMobileMenu()">AROS</a>
+<a href="#catalogo" onclick="goToCategory('Pulsera');toggleMobileMenu()">PULSERAS</a>
+<a href="#catalogo" onclick="goToCategory('Collar');toggleMobileMenu()">COLLARES</a>
+<a href="#catalogo" onclick="goToCategory('Anillo');toggleMobileMenu()">ANILLOS</a>
+<a href="#instinto" onclick="goToInstinto();toggleMobileMenu()">INSTINTO</a>
+</div>
+</header>
+
+<main id="home">
+<section class="hero" id="inicio">
+<img class="hero-slide" id="heroSlide1" src="assets/punto luz_1.jpg" alt="DÓMINI — pieza editorial">
+<img class="hero-slide" id="heroSlide2" src="assets/X755_3.jpg" alt="DÓMINI — Colección Instinto">
+<div class="hero-copy">
+<div class="hero-kicker" id="heroKicker">DÓMINI / JOYERÍA CONTEMPORÁNEA</div>
+<h1 id="heroTitle">PIEZAS CON<br>CARÁCTER.</h1>
+<p id="heroText">Una selección de piezas contemporáneas para quienes eligen detalles con identidad.</p>
+<a class="hero-cta" href="#instinto" onclick="goToInstinto()" id="heroCta">EXPLORAR INSTINTO <span>→</span></a>
+</div>
+<div class="hero-label" id="heroLabel">DÓMINI</div>
+<div class="hero-dots"><span></span><span></span></div>
+</section>
+
+<section class="home-section" id="instinto">
+<div class="instinto-head">
+<div><div class="section-kicker">Una primera selección</div><h2 class="section-title">Colección Instinto</h2></div>
+<p class="section-intro">Piezas elegidas por su forma, textura y carácter. Una selección breve, pensada como un conjunto y no como un catálogo infinito.</p>
+</div>
+<div class="instinto-track" id="instintoTrack"></div>
+</section>
+
+<section class="brand-story">
+<div class="story-inner">
+<div class="story-image no-image" id="packagingFrame"><img src="assets/packaging.jpg" alt="Packaging DÓMINI" onerror="this.style.display='none';document.getElementById('packagingFrame').classList.add('no-image')"></div>
+<div class="story-copy"><div class="section-kicker">El universo DÓMINI</div><h2>El detalle también forma parte de la pieza.</h2><div class="story-rule"></div><p>La presentación, el objeto y la experiencia de recibir una pieza forman parte de la identidad de DÓMINI.</p><p>Este espacio queda preparado para incorporar fotografías del packaging, detalles y escenas de la marca.</p></div>
+</div>
+</section>
+
+<section class="home-section category-zone" id="categorias">
+<div class="section-kicker">Explora la tienda</div><h2 class="section-title">Las piezas</h2>
+<div class="category-grid">
+<a class="category-link" href="#catalogo" onclick="goToCategory('Aros')"><span>Aros</span><small>EXPLORAR</small></a>
+<a class="category-link" href="#catalogo" onclick="goToCategory('Pulsera')"><span>Pulseras</span><small>EXPLORAR</small></a>
+<a class="category-link" href="#catalogo" onclick="goToCategory('Collar')"><span>Collares</span><small>EXPLORAR</small></a>
+<a class="category-link" href="#catalogo" onclick="goToCategory('Anillo')"><span>Anillos</span><small>EXPLORAR</small></a>
+</div>
+</section>
+</main>
+
+<section class="catalog" id="catalogo">
+<div class="catalog-head"><div><div class="section-kicker" id="catalogKicker">DÓMINI</div><h2 class="catalog-title" id="catalogTitle">Piezas</h2></div><div class="filters" id="filters"></div></div>
+<div class="grid" id="grid"></div>
+</section>
+
+<footer><div class="foot"><div class="logo">DÓMINI</div><p>Pedidos y consultas por WhatsApp.<br>Los pagos online se incorporarán en una segunda etapa.</p></div></footer>
+
+<div class="overlay" id="cartOverlay" onclick="if(event.target===this)closeCart()"><aside class="drawer"><div class="drawerhead"><h3>Tu carrito</h3><button class="x" onclick="closeCart()">×</button></div><div id="cartItems"></div><div id="emptyCart" class="note">Tu carrito está vacío. Agrega tus piezas favoritas para preparar el pedido.</div><div id="cartBottom" style="display:none"><div class="total"><span>Total</span><strong id="cartTotal">$0</strong></div><button class="checkout" onclick="sendWhatsApp()">ENVIAR PEDIDO POR WHATSAPP</button><div class="note">Al enviar el pedido se abrirá WhatsApp con el detalle de las piezas, cantidades y total. La disponibilidad se confirma antes del pago.</div></div></aside></div>
+
+<div class="modal" id="productModal"><div class="productmodal"><button class="closemodal" onclick="closeProduct()">×</button><div class="pmphotos" id="pmphotos"></div><div class="pminfo" id="pminfo"></div></div></div>
+
+<script>
+let products=[];
+let cart=JSON.parse(localStorage.getItem('domini_cart')||'{}');
+let currentProduct=null,currentProductPhoto=1,touchStartX=0;
+const money=n=>new Intl.NumberFormat('es-CL',{style:'currency',currency:'CLP',maximumFractionDigits:0}).format(n);
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+async function init(){try{products=await fetch('products.json').then(r=>r.json());buildFilters();renderInstinto();updateCart();}catch(e){console.error(e)}}
+function buildFilters(){const cats=['Todos',...new Set(products.map(p=>p.category).filter(Boolean))];document.getElementById('filters').innerHTML=cats.map((c,i)=>`<button class="filter ${i===0?'active':''}" onclick="render('${esc(c)}',this)">${esc(c)}</button>`).join('')}
+function render(cat='Todos',btn){document.getElementById('catalogo').classList.add('show');if(btn){document.querySelectorAll('#filters .filter').forEach(x=>x.classList.remove('active'));btn.classList.add('active')}const list=cat==='Todos'?products:products.filter(p=>p.category===cat);document.getElementById('grid').innerHTML=list.map(card).join('');document.getElementById('catalogTitle').textContent=cat==='Todos'?'Piezas':cat+'s';}
+function card(p){const avail=p.stock>0;return `<article class="card"><div class="pic" onclick="openProduct('${esc(p.code)}')"><img src="${p.photo1}" alt="${esc(p.name)}" loading="lazy">${avail?`<button onclick="event.stopPropagation();add('${esc(p.code)}')" aria-label="Agregar ${esc(p.name)}">+</button>`:''}</div><div class="info"><div class="name">${esc(p.name)}</div><div class="price">${avail?money(p.price):'<span class="sold-price">SIN STOCK</span>'}</div></div></article>`}
+function renderInstinto(){const list=products.filter(p=>(p.collection||'').trim().toLowerCase()==='instinto');const track=document.getElementById('instintoTrack');track.innerHTML=list.length?list.map(p=>{const avail=p.stock>0;return `<article class="mini-card"><div class="mini-pic" onclick="openProduct('${esc(p.code)}')"><img src="${p.photo1}" alt="${esc(p.name)}" loading="lazy">${avail?`<button class="mini-add" onclick="event.stopPropagation();add('${esc(p.code)}')">+</button>`:''}</div><div class="mini-info"><div class="mini-name">${esc(p.name)}</div><div class="mini-price">${avail?money(p.price):'SIN STOCK'}</div></div></article>`}).join(''):`<p class="section-intro">Aún no hay piezas asignadas a esta colección.</p>`}
+function goToCategory(category){document.getElementById('home').style.display='none';document.getElementById('catalogo').classList.add('show');const button=[...document.querySelectorAll('#filters .filter')].find(b=>b.textContent.trim().toLowerCase()===category.toLowerCase());render(category,button);window.scrollTo({top:document.getElementById('catalogo').offsetTop-100,behavior:'smooth'});}
+function goToInstinto(){document.getElementById('home').style.display='block';document.getElementById('catalogo').classList.remove('show');setTimeout(()=>document.getElementById('instinto').scrollIntoView({behavior:'smooth',block:'start'}),30)}
+function showHome(){document.getElementById('home').style.display='block';document.getElementById('catalogo').classList.remove('show');window.scrollTo({top:0,behavior:'smooth'})}
+function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('show')}
+function openProduct(code){const p=products.find(x=>x.code===code);if(!p)return;currentProduct=p;currentProductPhoto=1;document.getElementById('pmphotos').innerHTML=`<img id="productMainPhoto" src="${p.photo1}" alt="${esc(p.name)}">${p.photo2?`<button class="photo-arrow photo-prev" onclick="changeProductPhoto(-1)" aria-label="Foto anterior"></button><button class="photo-arrow photo-next" onclick="changeProductPhoto(1)" aria-label="Foto siguiente"></button><div class="photo-counter" id="photoCounter" data-active="1"></div>`:''}`;document.getElementById('pminfo').innerHTML=`<div class="collection">${esc(p.collection||'DÓMINI')}</div><h2>${esc(p.name)}</h2><div class="bigprice">${money(p.price)}</div><p>${esc(p.description||'').replace(/\n/g,'<br>')}</p><div class="material"><strong>MATERIAL</strong><br>${esc(p.material||'')}</div>${p.stock>0?`<button class="checkout" onclick="add('${esc(p.code)}');closeProduct();openCart()">AGREGAR AL CARRITO</button>`:`<div class="sold-price" style="margin-top:28px">SIN STOCK</div>`}`;document.getElementById('productModal').classList.add('show');}
+function changeProductPhoto(direction){if(!currentProduct||!currentProduct.photo2)return;currentProductPhoto=currentProductPhoto===1?2:1;document.getElementById('productMainPhoto').src=currentProductPhoto===1?currentProduct.photo1:currentProduct.photo2;document.getElementById('photoCounter').setAttribute('data-active',currentProductPhoto)}
+const pm=document.getElementById('pmphotos');pm.addEventListener('touchstart',e=>{touchStartX=e.changedTouches[0].clientX},{passive:true});pm.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-touchStartX;if(Math.abs(dx)>45)changeProductPhoto(dx<0?1:-1)},{passive:true});
+function closeProduct(){document.getElementById('productModal').classList.remove('show')}
+function add(code){const p=products.find(x=>x.code===code);if(!p||p.stock<1)return;cart[code]=Math.min((cart[code]||0)+1,p.stock);save();updateCart()}
+function change(code,d){const p=products.find(x=>x.code===code);if(!p)return;cart[code]=(cart[code]||0)+d;if(cart[code]<=0)delete cart[code];if(cart[code]>p.stock)cart[code]=p.stock;save();updateCart()}
+function removeFromCart(code){delete cart[code];save();updateCart()}
+function save(){localStorage.setItem('domini_cart',JSON.stringify(cart))}
+function updateCart(){let keys=Object.keys(cart),total=0;document.getElementById('cartCount').textContent=keys.reduce((a,k)=>a+cart[k],0);document.getElementById('emptyCart').style.display=keys.length?'none':'block';document.getElementById('cartBottom').style.display=keys.length?'block':'none';document.getElementById('cartItems').innerHTML=keys.map(k=>{const p=products.find(x=>x.code===k);if(!p)return '';total+=p.price*cart[k];return `<div class="cartitem"><img src="${p.photo1}" alt="${esc(p.name)}"><div><strong>${esc(p.name)}</strong><div class="meta">${money(p.price)} c/u</div><div class="qty"><button onclick="change('${esc(k)}',-1)">−</button><span>${cart[k]}</span><button onclick="change('${esc(k)}',1)">+</button></div></div><div class="cartitem-right"><button class="remove-item" onclick="removeFromCart('${esc(k)}')" aria-label="Eliminar">×</button><strong>${money(p.price*cart[k])}</strong></div></div>`}).join('');document.getElementById('cartTotal').textContent=money(total)}
+function openCart(){document.getElementById('cartOverlay').classList.add('show');document.body.style.overflow='hidden';updateCart()}
+function closeCart(){document.getElementById('cartOverlay').classList.remove('show');document.body.style.overflow=''}
+function sendWhatsApp(){const keys=Object.keys(cart);if(!keys.length)return;let total=0,msg='Hola DÓMINI, quiero hacer este pedido:\n\n';keys.forEach(k=>{const p=products.find(x=>x.code===k);if(!p)return;total+=p.price*cart[k];msg+=`${p.name} — ${cart[k]} unidad(es) — ${money(p.price*cart[k])}\nCódigo: ${p.code}\n`});msg+=`\nTOTAL: ${money(total)}\n\nQuedo atenta para coordinar disponibilidad, entrega/envío y forma de pago.`;window.open('https://wa.me/56920862501?text='+encodeURIComponent(msg),'_blank')}
+document.getElementById('productModal').addEventListener('click',e=>{if(e.target.id==='productModal')closeProduct()});
+init();
+</script>
+</body>
+</html>
